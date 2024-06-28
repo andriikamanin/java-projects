@@ -38,10 +38,24 @@ public class ListaGiocatori {
     }
 
 
-   /* public void eleminaGiocatore(String cognome){
+   public String eleminaGiocatore(String cognome){
         if(head != null){
-            return "";
+            return "Lista e' vuota";
         }
-    }*/
+
+        if(head.getCognome().equals(cognome)){
+            head = head.getNext();
+        }
+
+        Giocatore current = head;
+        while(current != null){
+            if(current.getCognome().equals(cognome)){
+                return "Giocatore " + current.getNome() + " " + current.getCognome() + " eleminato.\n";
+            }
+            current = current.getNext();
+        }
+
+        return "Giocatore non trovato\n";
+    }
 
 }
