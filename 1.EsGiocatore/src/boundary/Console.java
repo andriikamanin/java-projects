@@ -52,15 +52,21 @@ public class Console {
         }
     }
 
+
+    //Metodo che aggiunge nuovo operazione
     private void aggiungiOperazione(String nome, String stato){
         listaOperazioni.aggiungiOperazione(nome,stato);
     }
 
+
+    //Metodo che visualizza tutti operazioni eseguiti
     private void visualizzaElencoOperazioni() {
         String elencoOperazioni = listaOperazioni.listaOperazioni();
         System.out.println(elencoOperazioni + "\n");
     }
 
+
+    //Metodo per ricerca di un giocatore
     private void ricercaGiocatore() {
         System.out.println("Inserisci cognome del giocatore: ");
         String cognome = scanner.nextLine();
@@ -73,6 +79,8 @@ public class Console {
 
     }
 
+
+    //Metodo per elemenare un giocatore
     private void eleminaGiocatore() {
         System.out.println("Inserisci cognome del giocatore: ");
         String cognome = scanner.nextLine();
@@ -83,6 +91,8 @@ public class Console {
 
     }
 
+
+    //Metodo che visualizza tutti giocatori
     private void visualizzaTuttiGiocatori() {
         String elencoGiocatori = listaGiocatori.elencoGiocatori();
         System.out.println(elencoGiocatori);
@@ -90,6 +100,8 @@ public class Console {
         aggiungiOperazione("visualizza tutti giocatori", "visualizzato");
     }
 
+
+    //Metodo che aggiunge nuovo giocatore
     private void aggiungereNuovoGiocatore() {
         System.out.println("Menu di aggiungere nuovo giocatore\n");
 
@@ -108,6 +120,8 @@ public class Console {
         aggiungiOperazione("aggiungere nuovo giocatore: " + nome + " " + cognome, "aggiunto");
     }
 
+
+    //Metodo di avvia
     public void start(){
         boolean isRunning = true;
         while(isRunning){

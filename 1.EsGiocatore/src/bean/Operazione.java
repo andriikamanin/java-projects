@@ -1,10 +1,10 @@
 package bean;
 
 public class Operazione {
-    private String nome;
-    private String stato;
+    private String nome; //nome dell'operazione
+    private String stato; //stato dell'operazione
 
-    private Operazione next;
+    private Operazione next; //riferimento a prossimo elemento
 
     @Override
     public String toString() {

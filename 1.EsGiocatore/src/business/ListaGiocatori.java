@@ -5,10 +5,14 @@ import bean.Giocatore;
 public class ListaGiocatori {
     private Giocatore head;
 
+
+    //Costrutore
     public ListaGiocatori() {
         head = null;
     }
 
+
+    //metodo per aggiungere nuovo elemento nella lista
     public void addTail(Giocatore nuovoGiocatore){
         if(head == null){
             head = nuovoGiocatore;
@@ -21,12 +25,16 @@ public class ListaGiocatori {
         }
     }
 
+
+
+    //Metodo per aggiungere nuovo giocatore
     public void aggiungiGiocatore(String nome, String cognome, String club){
         Giocatore nuovoGiocatore = new Giocatore(nome, cognome, club);
         addTail(nuovoGiocatore);
     }
 
 
+    //Metodo per visualizza tutti elementi della lista
     public String elencoGiocatori(){
         String elenco = "";
         Giocatore current = head;
@@ -37,7 +45,7 @@ public class ListaGiocatori {
         return elenco;
     }
 
-
+    //Metodo per eleminare un elemento delle lista
    public String eleminaGiocatore(String cognome){
         if(head == null){
             return "Lista e' vuota";
@@ -60,7 +68,7 @@ public class ListaGiocatori {
         return "Giocatore non trovato\n";
     }
 
-
+    //Metodo per cercare un elemento della lista
     public String ricercaGiocatore(String cognome){
         if(head == null){
             return "Errore: nessun giocatore non e' stato aggiunto.";
