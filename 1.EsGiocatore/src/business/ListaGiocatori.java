@@ -60,4 +60,26 @@ public class ListaGiocatori {
         return "Giocatore non trovato\n";
     }
 
+
+    public String ricercaGiocatore(String cognome){
+        if(head == null){
+            return "Errore: nessun giocatore non e' stato aggiunto.";
+        }
+
+        if(head.getCognome().equals(cognome)){
+            return "Giocatore trovato.";
+        }
+
+        Giocatore current = head;
+        while(current != null){
+            if(current.getCognome().equals(cognome)){
+                return "Giocatore trovato.";
+            }
+            current = current.getNext();
+        }
+
+        return "Giocatore non trovato\n";
+
+    }
+
 }
