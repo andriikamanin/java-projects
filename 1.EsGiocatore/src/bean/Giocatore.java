@@ -10,7 +10,7 @@ public class Giocatore {
 
     @Override
     public String toString() {
-        return super.toString();
+        return nome + " " + cognome + " " + club;
     }
 
     public Giocatore(String nome, String cognome, String club) {

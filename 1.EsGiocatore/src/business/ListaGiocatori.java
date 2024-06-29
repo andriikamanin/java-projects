@@ -31,7 +31,7 @@ public class ListaGiocatori {
         String elenco = "";
         Giocatore current = head;
         while(current != null){
-            elenco += current.getNome() + "\n";
+            elenco += current.toString() + "\n";
             current = current.getNext();
         }
         return elenco;
@@ -39,12 +39,14 @@ public class ListaGiocatori {
 
 
    public String eleminaGiocatore(String cognome){
-        if(head != null){
+        if(head == null){
             return "Lista e' vuota";
         }
 
         if(head.getCognome().equals(cognome)){
+
             head = head.getNext();
+            return "Giocatore eleminato.\r";
         }
 
         Giocatore current = head;
